@@ -1,0 +1,328 @@
+{extends file="../index.html"}
+{block name=article}{strip}
+
+</div>
+
+{if $VITRINA_BLOCKS} 
+	<script>
+		jQuery(function(){
+			jQuery('#camera_wrap_0').camera({
+				navigation: false,
+				playPause: false,
+				thumbnails: false,
+				navigationHover: false,
+				barPosition: 'top',
+				loader: false,
+				time: 3000,
+				transPeriod:800,
+				alignment: 'center',
+				autoAdvance: true,
+				mobileAutoAdvance: true,
+				barDirection: 'leftToRight', 
+				barPosition: 'bottom',
+				easing: 'easeInOutExpo',
+				fx: 'simpleFade',
+				height: '35.07%',
+				minHeight: '300px',
+				hover: false,
+				pagination: true,
+				loaderColor			: '#1f1f1f', 
+				loaderBgColor		: 'transparent',
+				loaderOpacity		: 1,
+				loaderPadding		: 0,
+				loaderStroke		: 3,
+				});
+		});
+	</script>
+
+<div class="fluid_container" >
+	<div class="camera_container">
+		<div id="camera_wrap_0">
+			<div title="slide-3" data-thumb="{$VITRINA_BLOCKS[0].img_src|replace:'dev5':'biz'|replace:'small/':''}"  data-link="{$VITRINA_BLOCKS[0].href}" data-src="{$VITRINA_BLOCKS[0].img_src|replace:'dev5':'biz'|replace:'small/':''}">
+				<div class="camera_caption fadeIn">
+					<div class="container">
+						<em class="good_name">{substr($VITRINA_BLOCKS[0].product_name|escape:"htmlall",0,320)}...</em>
+						<span class="price">
+							{if $VITRINA_BLOCKS[0].price_native}
+								{$VITRINA_BLOCKS[0].price_native} {$props->get('finance.native_currency_txt_code')}
+							{elseif (float)$VITRINA_BLOCKS[0].price_foreign}
+								{$VITRINA_BLOCKS[0].price_foreign} {$scurrency}
+							{/if}
+						</span>
+						<a href="{$VITRINA_BLOCKS[0].href}" class="product-btn-add button addToCart b-button_type_order">Подробнее</a> 
+					</div>
+				</div>
+			</div>
+
+			<div title="slide-1" data-thumb="{$VITRINA_BLOCKS[1].img_src|replace:'dev5':'biz'|replace:'small/':''}"  data-link="{$VITRINA_BLOCKS[1].href}" data-src="{$VITRINA_BLOCKS[1].img_src|replace:'dev5':'biz'|replace:'small/':''}">
+				<div class="camera_caption fadeIn">
+					<div class="container">
+						<em class="good_name">{substr($VITRINA_BLOCKS[1].product_name|escape:"htmlall",0,320)}...</em>
+						<span class="price">
+							{if $VITRINA_BLOCKS[1].price_native}
+								{$VITRINA_BLOCKS[1].price_native} {$props->get('finance.native_currency_txt_code')}
+							{elseif (float)$VITRINA_BLOCKS[1].price_foreign}
+								{$VITRINA_BLOCKS[1].price_foreign} {$scurrency}
+							{/if}
+						</span>
+						<a href="{$VITRINA_BLOCKS[1].href}" class="product-btn-add button addToCart b-button_type_order">Подробнее</a> 
+					</div>
+				</div>
+			</div>
+
+			<div title="slide-2" data-thumb="{$VITRINA_BLOCKS[2].img_src|replace:'dev5':'biz'|replace:'small/':''}"  data-link="{$VITRINA_BLOCKS[2].href}" data-src="{$VITRINA_BLOCKS[2].img_src|replace:'dev5':'biz'|replace:'small/':''}">
+			<div class="camera_caption fadeIn">
+					<div class="container">
+						<em class="good_name">{substr($VITRINA_BLOCKS[2].product_name|escape:"htmlall",0,320)}...</em>
+						<span class="price">
+							{if $VITRINA_BLOCKS[2].price_native}
+								{$VITRINA_BLOCKS[2].price_native} {$props->get('finance.native_currency_txt_code')}
+							{elseif (float)$VITRINA_BLOCKS[2].price_foreign}
+								{$VITRINA_BLOCKS[2].price_foreign} {$scurrency}
+							{/if}
+						</span>
+						<a href="{$VITRINA_BLOCKS[2].href}" class="product-btn-add button addToCart b-button_type_order">Подробнее</a> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+	  
+	<div class="clear"></div>
+{/if}
+
+
+
+<div class="container ">
+
+
+
+<div id="banner0" class="banners row">
+        <div class="Men’s Clothes">
+            <div class="banner-box">
+                <a class="clearfix" href="#">
+                    <img src="{$template}/image/banner-1.jpg" alt="Men’s Clothes" class="img-responsive">
+                    <div class="s-desc">Men’s
+                        <br> Clothes
+                        <i class="fa fa-shopping-cart"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="banner1" class="banners row">
+        <div class="Unisex Clothes">
+            <div class="banner-box">
+                <a class="clearfix" href="#">
+                    <img src="{$template}/image/banner-2.jpg" alt="Unisex Clothes" class="img-responsive">
+                    <div class="s-desc">Unisex
+                        <br> Clothes
+                        <i class="fa fa-shopping-cart"></i></div>
+                </a>
+            </div>
+        </div>
+        <div class="Women’s Clothes">
+            <div class="banner-box">
+                <a class="clearfix" href="#">
+                    <img src="{$template}/image/banner-3.jpg" alt="Women’s Clothes" class="img-responsive">
+                    <div class="s-desc">Women’s
+                        <br> Clothes
+                        <i class="fa fa-shopping-cart"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="banner2" class="banners row">
+        <div class="Accessories Collection">
+            <div class="banner-box">
+                <a class="clearfix" href="#">
+                    <img src="{$template}/image/banner-4.jpg" alt="Accessories Collection" class="img-responsive">
+                    <div class="s-desc">Accessories
+                        <br> Collection
+                        <i class="fa fa-shopping-cart"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+		<div class="common-home">
+			<div class="logo-section">
+				<ul class="flex-list">
+					<li>
+						<a href="#">
+							<img src="{$template}/image//brand-1.png"  class="img-responsive">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="{$template}/image//brand-2.png"  class="img-responsive">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="{$template}/image//brand-3.png"  class="img-responsive">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="{$template}/image//brand-4.png"  class="img-responsive">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="{$template}/image//brand-5.png"  class="img-responsive">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="{$template}/image//brand-6.png"  class="img-responsive">
+						</a>
+					</li>
+				</ul>
+				    
+				</div>
+		</div>
+
+
+
+
+
+
+<div class="container ">
+
+
+
+
+
+
+
+
+<div class="box">
+	<!-- <div class="box-heading">{$props->get('lng.products_services')|capitalize}</div> -->
+	<div class="box-heading"><h3>{$props->get('lng.products')|capitalize}</h3></div>
+</div>
+
+
+<div class="wrapper float-fix">
+	
+	{$n=1}
+	{foreach from=$GOODS_BLOCKS item=item  key=key}
+
+
+	<div class="product-layout col-lg-3 col-md-3 col-sm-3 col-xs-12">
+    <div class="product-thumb transition options">
+        <div class="image">
+            <a href="{$item.href}" style="background-image: url('{$item.img_src}')"  class="product-bg-container">
+                <!-- <img alt="{$item.product_name}" src="{$item.img_src}"> -->
+            </a>
+        </div>
+        <div class="caption">
+
+        		{if $IS_SHOP_CART_ACTIVE  && $item.price_native > 0}
+							<a id="{$item.id}"
+							class="product-btn-add button addToCart b-button_type_order"
+							onClick="ga('send', 'event', 'CPA', 'order', 'order_button'); ga('send', 'event', 'cart', 'add_to_cart'); addtocart({$item.id}, '{$smarty.const.COUNTRY_CODE}', 1); return false;"
+							>
+							    <span>{$props->get('lng.add_to_card')}</span>
+							    <i class="fa fa-shopping-cart"></i> Купить
+							</a>
+							{else}
+							    {if $item.message_popup_link}
+							    <a class="product-btn-add button addToCart b-button_type_order js-message-form-popup" data-href="{$item.message_popup_link}?force_order=1">
+							        <span>{$props->get('lng.order')}</span>
+							        <i class="fa fa-shopping-cart"></i> Купить
+							    </a>
+							    {else}
+							    <a id="{$item.id}"
+							    href="javascript: //"
+							    class="product-btn-add button addToCart b-button_type_order js-button_type_order b-show_other"
+							    onClick="trackMe('{$typeOfPage}', 'order', 'Click');ga('send', 'event', 'CPA', 'order', 'order_button');"
+							    >
+							        <span>{$props->get('lng.order')}</span>
+							        <i class="fa fa-shopping-cart"></i> Купить
+							    </a>
+							    {/if}
+							{/if}
+
+
+		            <div class="name"><a href="{$item.href}">{substr($item.product_name|escape:"htmlall",0,270)}... </a></div>
+		            <div class="description-small">{substr($item.description|escape:"htmlall",0,570)}</div>
+		            <div class="price">
+		                <span class="price-new">{$item.price_native} {$item.currency}</span>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+
+
+  {if ($n>=8)}
+		{break}
+	{/if}
+	{$n=$n+1}
+
+	{/foreach}
+
+</div>
+
+
+
+
+
+<div class="box_html gift-cards">
+    <a href="#">
+        <i class="fa fa-qrcode"></i>
+        <span>Gift <br>Cards</span>
+        <i class="fa fa-file-text-o"></i>
+    </a>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+{if $BLOCK_NEWS}
+	<section class="parallax well2 wow fadeIn" data-url="{$template}/image/parallax-1.jpg" data-mobile="true" data-speed="1"> 
+    <div class="container">
+      <div class="content">
+      		<div class="title">
+      		<span>{$BLOCK_NEWS[1].title|escape:"htmlall"}</span>
+      		<br><br>
+			    {$BLOCK_NEWS[1].title|escape:"htmlall"} : {$BLOCK_NEWS[1].body|escape:"htmlall"}
+			    <br>
+			    <a href="{$BLOCK_NEWS[1].href}">подробнее</a>
+			</div>
+    </div>
+  </section>
+ {/if}
+
+
+<div class="map-content marBot1">
+	<div id="google-map" class="map_model"  data-x="{$company.longitude}" data-y="{$company.latitude}" data-zoom="15"></div>
+	<ul class="map_locations">
+		<li data-x="{$company.longitude}" data-y="{$company.latitude}" data-basic="{$template}/image/marker_map.png" data-active="{$template}/image/marker_map_active.png">
+			<p> Позвоните нам <span><a href="callto:{$company.phone}">{$company.phone}</a></span></p>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+{/strip}{/block}
+
+{block name="custom_js"}
+	<script src="{$STATIC_HOST}/js/includes/showcase/showcase.js"></script>
+{/block}
